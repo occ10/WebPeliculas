@@ -1,0 +1,71 @@
+PASOS PREVIOS
+
+- Subir código de las plantillas a Github. Luego se irán modificando.
+
+- Creación base de datos (entidad relación + modelo físico en phpmyadmin). Cada uno de nosotros deberá
+tener la base de datos en local (en xampp). Si se actualiza con algún campo nuevo o tabla nueva, habrá que avisar.
+
+- Para realizar la base de datos, seguir el diagrama de datos que se realizó en la primera práctica. Hay que agregar también la entidad "Comentario", tal y como nos dijo Jaume.
+
+- Adaptar plantilla web a nuestro proyecto: quitar secciones que no nos interesan y meter estructura de codeigniter poco a poco en los archivos .html de la plantilla.
+Esto debe hacerse tanto para public como para private.
+
+
+PASOS DESARROLLO
+
+- Estructura del repositorio:
+
+	- public: carpeta con el contenido de la plantilla public
+	- private: carpeta con el contenido de la plantilla private del administrador
+
+
+- Secciones a realizar por cada uno:
+
+	- public: 
+
+		home+cartelera
+		ficha detalle peli (mostrar sus datos, indicar participantes de la película (director, actores, etc) y si tiene premios también mostrarlos)
+		login (si al loguear, su login pertenece a un usuario administrador, será redireccionado a private. Si su login pertenece a un usuario normal, podrá navegar por la web de igual manera que un invitado, pero su login aparecerá en alguna parte y podrá cerrar sesión)
+		registro
+		Usuario puede votar películas
+		Usuario puede comentar películas
+
+	- private: 
+		Comprobar si sesión está iniciada, en caso negativo, no se puede acceder y debe ser redireccionado a la página login de public.
+		CRUD de las películas
+		CRUD participantes de las películas (crear un participante (actor, director, producto, guionista...) y luego poder asignarlo a N películas
+		CRUD premios (crear un premio y luego poder asignarlo a 1 película).
+
+PASOS DOCUMENTACIÓN
+
+- Realmente la documentación cuenta más para esta práctica que incluso el desarrollo, así que no nos compliquemos mucho picando código.
+
+- Esta parte de documentación creo que entre los dos podremos realizarla la última semana: el día 24 tenemos examen de ADI y después ya no tenemos nada hasta el 27 que es la entrega. 
+En dos tardes creo que se puede documentar suficientemente bien.
+
+Esto es lo que habría que hacer:
+
+- Entidad relación (ya realizada en los PASOS PREVIOS).
+
+- Agregar entidad "Comentarios" al datamodel de la primera práctica.
+
+- Wireframe de navegación
+
+- Mockups de la web:
+	- Con herramientas como balsamiq mockups o mockup builder.
+	- También hacer capturas de la web definitiva, para que se pueda comparar cómo ha quedado vs cómo era el wireframe.
+
+- Apuntar qué patrones de diseño web hemos seguido. Repasar los apuntes de patrones y poner algunos.
+
+- Realizar memoria PDF con los siguientes apartados:
+
+	- Titulo
+	– Introducción/descripción general
+	– Wireframes y mockups
+	- Patrones de diseño web aplicados con su descripción y justificación.
+	– Diagramas: casos de uso, de clases, de datos, etc.
+	– Descripción técnica del sistema: tecnologías, arquitectura, servicios y servidores.
+	– Detalles de implementación
+	– Problemas encontrados y su solución
+	– Mejoras y ampliaciones
+	– Referencias

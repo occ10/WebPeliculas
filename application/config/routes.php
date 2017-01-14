@@ -56,6 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 /*
  * RUTAS PÚBLICAS
  */
+ $route['gestion'] = 'gestion/index';
 $route['contacto'] = 'contacto/index';
 $route['faq'] = 'faq/index';
 $route['listadopeliculas'] = 'pelicula/index';

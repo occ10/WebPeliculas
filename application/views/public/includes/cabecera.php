@@ -94,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="form">
                                 <h3>Entra con tu cuenta</h3>
-                                <form action="#" method="post">
+                                <form action="login/index" method="post">
                                     <input type="text" name="Username" placeholder="Usuario" required="">
                                     <input type="password" name="Password" placeholder="Contraseña" required="">
                                     <input type="submit" value="Entrar">
@@ -102,7 +102,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="form">
                                 <h3>Regístrate con nosotros</h3>
-                                <form action="#" method="post">
+                                <form action="registrar/index" method="post">
                                     <input type="text" name="Username" placeholder="Usuario" required="">
                                     <input type="password" name="Password" placeholder="Contraseña" required="">
                                     <input type="email" name="Email" placeholder="Correo electrónico" required="">

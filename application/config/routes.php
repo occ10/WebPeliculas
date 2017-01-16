@@ -56,11 +56,12 @@ $route['translate_uri_dashes'] = FALSE;
 /*
  * RUTAS PÚBLICAS
  */
- $route['gestion'] = 'gestion/index';
+$route['gestion'] = 'gestion/index';
 $route['contacto'] = 'contacto/index';
 $route['faq'] = 'faq/index';
 $route['listadopeliculas'] = 'pelicula/index';
 $route['detallepelicula'] = 'pelicula/detalle'; //habrá que indicar un parámetro que será la id de la película
+
 
 /**
  * RUTAS PRIVADAS

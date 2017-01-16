@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class LoginModel extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -12,22 +12,24 @@ class Login extends CI_Controller {
     
 	public function index()
 	{        
-                $data = array(
-                      'nombre' => $this->input->post('Username'),
-                      'password' => $this->input->post('Password'),
-                      
+        $data = array(
+              'nombre' => $this->input->post('nombre'),
+              'password' => $this->input->post('password')
+        );
 
-                );
-		$this->load->model('Login_model');
-		  $output['result'] = $this->Login_model->get_contents($data);
+		$this->load->model('LoginModel');
+        $output['result'] = $this->LoginModel->get_contents($data);
+
+        //HAY QUE COMPROBAR QUË TIPO ES
+
+        //SI ES TIPO == 1 -> ES USUARIO ADMIN Y DEBE SER REDIRIGIDO A LA VISTA PRIVATE
+        //SI ES TIPO == 2
+        //Si se crea la sesión, debe aparecer un mensaje en la vista cabecera
 		if(count($output['result']) >  0){
-			$this->load->view('public/index',$output);
-			//$this->load->view('public/contacto');
+			//$this->load->view('public/index',$output);
+            redirect('/');
 		}else{
- 
-		    $this->load->view('public/contacto');		
+            redirect('/');
 		}
-        //$this->load->view('public/index', $output);
-
 	}
 }

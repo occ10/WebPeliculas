@@ -18,7 +18,6 @@
                         <li class="<?php if($this->uri->segment(1)==""){echo "active";}?>"><a href="<?php echo site_url('/')?>">Inicio</a></li>
                         <li class="<?php if($this->uri->segment(1)=="listadopeliculas"){echo "active";}?>"><a href="<?php echo site_url('listadopeliculas')?>">Listado películas</a></li>
                         <li class="<?php if($this->uri->segment(1)=="contacto"){echo "active";}?>"><a href="<?php echo site_url('contacto')?>">Contacto</a></li>
-						<li class="<?php if($this->uri->segment(1)=="gestion"){echo "active";}?>"><a href="<?php echo site_url('gestion')?>">Gestion</a></li>
                     </ul>
                 </nav>
             </div>

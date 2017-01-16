@@ -19,62 +19,62 @@ $this->load->view('public/includes/cabecera');
             <!-- /movie-browse-agile -->
             <div class="show-top-grids-w3lagile">
                 <div class="col-sm-12 single-left">
-                    <div class="song">
-                        <div class="song-info">
-                            <h4 class="titulo-detalle">THE LEGEND OF TARZAN - Official Trailer 2</h4>
-                        </div>
-                        <div class="video-grid-single-page-agileits">
-                            <div data-video="dLmKio67pVQ" id="video"> <img src="assets/images/5.jpg" alt="" class="img-responsive" /> </div>
-                        </div>
-                    </div>
-                    <div class="song-grid-right">
-                        <div class="single-agile-shar-buttons">
-                            <div class="row">
-                                <div class="col-sm-10">
-                                    <ul class="ratings-detalle">
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                    </ul>
+                    <div class="row">
+                        <div class="song-info col-sm-8">
+                            <h4 class="titulo-detalle"><b>THE LEGEND OF TARZAN - Official Trailer 2</b></h4>
+                            <div class="song-grid-right">
+                                <div class="single-agile-shar-buttons">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <ul class="ratings-detalle">
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <p class="numeroVotos"><b>Nº Votos:</b> 12345</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h4 class="titulo-detalle">Descripción</h4>
+                                    <div class="panel_text">
+                                        En esta web encontrará toda la información relacionada con las películas de última actualidad (y también de más antigüedad). Podrá encontrar desde las novedades en cartelera hasta los detalles de cada película (sus participantes, como director/es, actores y actrices, etc.).
+                                    </div>
+                                    <hr>
+                                    <h4 class="titulo-detalle">Votación</h4>
+                                    <select name="votacion">
+                                        <option value="0">No vista</option>
+                                        <option value="10">10 - Excelente</option>
+                                        <option value="9">9 - Muy buena</option>
+                                        <option value="8">8 - Notable</option>
+                                        <option value="7">7 - Buena</option>
+                                        <option value="6">6 - Interesante</option>
+                                        <option value="5">5 - Pasable</option>
+                                        <option value="4">4 - Regular</option>
+                                        <option value="3">3 - Floja</option>
+                                        <option value="2">2 - Mala</option>
+                                        <option value="1">1 - Muy mala</option>
+                                    </select>
+                                    <hr>
+                                    <h4 class="titulo-detalle">Género</h4>
+                                    <div class="panel_text">
+                                        Aventuras, Acción...
+                                    </div>
+                                    <hr>
+                                    <h4 class="titulo-detalle">Participantes</h4>
+                                    <div class="panel_text">
+                                        Director:<br>
+                                        Actores:
+                                        ...
+                                    </div>
                                 </div>
-                                <div class="col-sm-2">
-                                    <p class="numeroVotos">Nº Votos: 12345</p>
-                                </div>
                             </div>
-                            <hr>
-                            <h4 class="titulo-detalle">Votación</h4>
-                            <select name="votacion">
-                                <option value="0">No vista</option>
-                                <option value="10">10 - Excelente</option>
-                                <option value="9">9 - Muy buena</option>
-                                <option value="8">8 - Notable</option>
-                                <option value="7">7 - Buena</option>
-                                <option value="6">6 - Interesante</option>
-                                <option value="5">5 - Pasable</option>
-                                <option value="4">4 - Regular</option>
-                                <option value="3">3 - Floja</option>
-                                <option value="2">2 - Mala</option>
-                                <option value="1">1 - Muy mala</option>
-                            </select>
-                            <hr>
-                            <h4 class="titulo-detalle">Género</h4>
-                            <div class="panel_text">
-                                Aventuras, Acción...
-                            </div>
-                            <hr>
-                            <h4 class="titulo-detalle">Participantes</h4>
-                            <div class="panel_text">
-                                Director:<br>
-                                Actores:
-                                ...
-                            </div>
-                            <hr>
-                            <h4 class="titulo-detalle">Descripción</h4>
-                            <div class="panel_text">
-                                En esta web encontrará toda la información relacionada con las películas de última actualidad (y también de más antigüedad). Podrá encontrar desde las novedades en cartelera hasta los detalles de cada película (sus participantes, como director/es, actores y actrices, etc.).
-                            </div>
+                        </div>
+                        <div class="col-sm-4 video-grid-single-page-agileits">
+                            <div> <img src="<?php echo base_url();?>assets/images/6.jpg" alt="" class="img-responsive" /> </div>
                         </div>
                     </div>
                     <hr>

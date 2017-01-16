@@ -95,17 +95,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="form">
                                 <h3>Entra con tu cuenta</h3>
                                 <form action="login/index" method="post">
-                                    <input type="text" name="Username" placeholder="Usuario" required="">
-                                    <input type="password" name="Password" placeholder="Contraseña" required="">
+                                    <input type="text" name="usuario" placeholder="Usuario" required="">
+                                    <input type="password" name="password" placeholder="Contraseña" required="">
                                     <input type="submit" value="Entrar">
                                 </form>
                             </div>
                             <div class="form">
                                 <h3>Regístrate con nosotros</h3>
-                                <form action="registrar/index" method="post">
-                                    <input type="text" name="Username" placeholder="Usuario" required="">
-                                    <input type="password" name="Password" placeholder="Contraseña" required="">
-                                    <input type="email" name="Email" placeholder="Correo electrónico" required="">
+                                <form action="registro/index" method="post">
+                                    <input type="text" name="nombre" placeholder="Usuario" required="">
+                                    <input type="password" name="password" placeholder="Contraseña" required="">
+                                    <input type="email" name="email" placeholder="Correo electrónico" required="">
                                     <input type="submit" value="Registrar">
                                 </form>
                             </div>

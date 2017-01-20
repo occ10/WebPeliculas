@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pelicula extends CI_Controller {
 
+    public function __construct() {
+        parent::__construct();
+
+        $this->load->database();// podria hacerlo desde el autoload
+    }
+
     /**
      * Listado de películas
      */
@@ -23,8 +29,11 @@ class Pelicula extends CI_Controller {
     /**
      * Una sola película, vista de detalle (debe recibir parámetro)
      */
-    public function detalle()
+    public function detalle($id)
     {
+        $this->load->model('PeliculaModel');
+
+        $this->PeliculaModel->buscaPorId($id);
         $this->load->view('public/perfilPelicula');
     }
 

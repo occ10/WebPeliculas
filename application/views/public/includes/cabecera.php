@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -68,11 +69,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="w3layouts_logo">
             <a href="<?php echo site_url('/')?>"><h1>Web<span>Películas</span></h1></a>
         </div>
-        <div class="w3l_sign_in_register" >
+		<?php
+
+		if (!$this->session->userdata('user')){
+        echo "<div class='w3l_sign_in_register' > " . $this->session->userdata('user') . "
+		     
             <ul>
-                <li><a href="#" data-toggle="modal" data-target="#myModal">Entrar</a></li>
+                <li><a href='#' data-toggle='modal' data-target='#myModal'>Entrar</a></li>
             </ul>
-        </div>
+        </div>";
+		}else{
+			
+        echo "<div class='w3l_sign_in_register' > <a href='" . site_url('crud') . "' >Bienvenido " . $this->session->userdata('user') . "</a>"
+            
+        . "</div>";
+		}
+		?>
         <div class="clearfix"> </div>
     </div>
 </div>
@@ -95,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="form">
                                 <h3>Entra con tu cuenta</h3>
                                 <form action="login/index" method="post">
-                                    <input type="text" name="usuario" placeholder="Usuario" required="">
+                                    <input type="text" name="nombre" placeholder="Usuario" required="">
                                     <input type="password" name="password" placeholder="Contraseña" required="">
                                     <input type="submit" value="Entrar">
                                 </form>

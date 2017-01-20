@@ -61,8 +61,8 @@ $route['contacto'] = 'contacto/index';
 $route['faq'] = 'faq/index';
 $route['listadopeliculas'] = 'pelicula/index';
 $route['detallepelicula/(:any)'] = 'pelicula/detalle/$1'; //habrá que indicar un parámetro que será la id de la película
-
-
+$route['cerrarSesion'] = 'login/unset_session_data';//cerrar sesion
+$route['crud'] = 'gestion/index';//cerrar sesion
 /**
  * RUTAS PRIVADAS
  */
@@ -70,3 +70,5 @@ $route['private'] = 'home/indexPrivada';
 $route['private/listadopeliculas'] = 'pelicula/indexPrivada';
 $route['private/listadoparticipantes'] = 'participante/indexPrivada';
 $route['private/listadopremios'] = 'premio/indexPrivada';
+
+

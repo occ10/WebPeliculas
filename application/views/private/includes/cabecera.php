@@ -28,6 +28,21 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <?php
+    if(isset($css_files) && isset($js_files)):
+        foreach($css_files as $file): ?>
+            <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
+
+        <?php endforeach;
+        foreach($js_files as $file): ?>
+            <script src="<?php echo $file; ?>"></script>
+        <?php endforeach; ?>
+   <?php else: ?>
+       <!-- jQuery -->
+        <script src="<?php echo base_url();?>assets/js/jquery-2.1.4.min.js"></script>
+   <?php endif;?>
+
+
 </head>
 
 <body>

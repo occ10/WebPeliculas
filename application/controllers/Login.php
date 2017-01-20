@@ -32,7 +32,8 @@ class Login extends CI_Controller {
 			$this->session->set_userdata('user', $data['nombre']);
 			
 			if($Resultado->tipo==1)
-				$this->load->view('private/home');
+				//$this->load->view('private/home');
+			    redirect('private');
 		    else
 			   redirect('/'); 	
         }else

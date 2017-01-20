@@ -67,8 +67,23 @@ $route['crud'] = 'gestion/index';//cerrar sesion
  * RUTAS PRIVADAS
  */
 $route['private'] = 'home/indexPrivada';
+
+//Rutas de gestión de películas (grocery_crud)
 $route['private/listadopeliculas'] = 'pelicula/indexPrivada';
+
+//Rutas de gestión de participantes (grocery_crud)
 $route['private/listadoparticipantes'] = 'participante/indexPrivada';
+$route['private/listadoparticipantes/add'] = 'participante/indexPrivada';
+$route['private/listadoparticipantes/insert'] = 'participante/indexPrivada';
+$route['private/listadoparticipantes/insert_validation'] = 'participante/indexPrivada';
+$route['private/listadoparticipantes/success/:num'] = 'participante/indexPrivada';
+$route['private/listadoparticipantes/delete/:num'] = 'participante/indexPrivada';
+$route['private/listadoparticipantes/read/:num'] = 'participante/indexPrivada';
+$route['private/listadoparticipantes/edit/:num'] = 'participante/indexPrivada';
+$route['private/listadoparticipantes/update_validation/:num'] = 'participante/indexPrivada';
+$route['private/listadoparticipantes/update/:num'] = 'participante/indexPrivada';
+$route['private/listadoparticipantes/ajax_list_info'] = 'participante/indexPrivada';
+$route['private/listadoparticipantes/ajax_list'] = 'participante/indexPrivada';
+
+//Rutas de gestión de premios (grocery_crud)
 $route['private/listadopremios'] = 'premio/indexPrivada';
-
-

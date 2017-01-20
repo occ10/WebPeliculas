@@ -31,10 +31,7 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#peliculas"><i class="fa fa-file-movie-o"></i> Películas <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="peliculas" class="collapse">
                     <li>
-                        <a href="#">Crear</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo site_url('private/listadopeliculas')?>">Listado</a>
+                        <a href="<?php echo site_url('private/listadopeliculas')?>">Gestión</a>
                     </li>
                 </ul>
             </li>
@@ -42,10 +39,8 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#participantes"><i class="fa fa-user"></i> Participantes <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="participantes" class="collapse">
                     <li>
-                        <a href="#">Crear</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo site_url('private/listadoparticipantes')?>">Listado</a>
+                        <a href="<?php echo site_url('private/listadoparticipantes')?>">Gestión</a>
+                        <?php //echo anchor('participante/indexPrivada', 'Listado' , 'title="Listado de participantes"'); ?>
                     </li>
                 </ul>
             </li>
@@ -53,10 +48,7 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#premios"><i class="fa fa-trophy"></i> Premios <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="premios" class="collapse">
                     <li>
-                        <a href="#">Crear</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo site_url('private/listadopremios')?>">Listado</a>
+                        <a href="<?php echo site_url('private/listadopremios')?>">Gestión</a>
                     </li>
                 </ul>
             </li>

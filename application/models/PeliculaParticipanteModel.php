@@ -1,0 +1,45 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+class PeliculaParticipanteModel extends CI_Model
+{
+
+    function __construct()
+    {
+        parent::__construct();
+    }
+
+    function get_contents1()
+    {
+        $this->db->select('id,titulo');
+        $this->db->from('pelicula');
+        $query = $this->db->get();
+        return $result = $query->result();
+    }
+
+    function get_contents2()
+    {
+        $this->db->select('id,nombre');
+        $this->db->from('participante');
+        $query = $this->db->get();
+        return $result = $query->result();
+    }
+
+    function insertaPeliculaParticipante($data)
+    {
+        //Inserta Participante en Pelicula en la base de datos
+        $this->db->insert('peliculaparticipante', $data);
+    }
+
+    function consultarDatosDuplicados($data)
+    {
+        $this->db->select('*');
+        $this->db->from('peliculaparticipante');
+        $this->db->where('pelicula', $data['pelicula']);
+        $this->db->where('participante', $data['participante']);
+
+        $query = $this->db->get();
+        return $result = $query->row();
+    }
+}

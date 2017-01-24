@@ -52,6 +52,23 @@
                     </li>
                 </ul>
             </li>
+
+
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#peliculaparticipante"><i class="fa fa-trophy"></i> Peliculas Participantes <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="peliculaparticipante" class="collapse">
+                    <li>
+                        <a href="<?php echo site_url('private/listadopeliculaparticipante')?>">Gestión</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo site_url('private/formPeliculaParticipante')?>">Insertar Participante Pelicula</a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+
         </ul>
     </div>
     <!-- /.navbar-collapse -->

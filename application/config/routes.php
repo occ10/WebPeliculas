@@ -112,4 +112,24 @@ $route['private/listadoparticipantes/update/:num'] = 'participante/indexPrivada'
 $route['private/listadoparticipantes/ajax_list_info'] = 'participante/indexPrivada';
 $route['private/listadoparticipantes/ajax_list'] = 'participante/indexPrivada';
 
+//Rutas de gestión de peliculaParticipantes (grocery_crud)
+$route['private/listadopeliculaparticipante'] = 'peliculaparticipante/indexPrivada';
+$route['private/listadopeliculaparticipante/add'] = 'peliculaparticipante/indexPrivada';
 
+$route['private/listadopeliculaparticipante/insert'] = 'peliculaparticipante/indexPrivada';
+$route['private/listadopeliculaparticipante/insert_validation'] = 'peliculaparticipante/indexPrivada';
+$route['private/listadopeliculaparticipante/success/:num'] = 'peliculaparticipante/indexPrivada';
+
+$route['private/listadopeliculaparticipante/delete/:num'] = 'peliculaparticipante/indexPrivada';
+$route['private/listadopeliculaparticipante/read/:num'] = 'peliculaparticipante/indexPrivada';
+$route['private/listadopeliculaparticipante/edit/:num'] = 'peliculaparticipante/indexPrivada';
+$route['private/listadopeliculaparticipante/update_validation/:num'] = 'peliculaparticipante/indexPrivada';
+$route['private/listadopeliculaparticipante/update/:num'] = 'peliculaparticipante/indexPrivada';
+$route['private/listadopeliculaparticipante/ajax_list_info'] = 'peliculaparticipante/indexPrivada';
+$route['private/listadopeliculaparticipante/ajax_list'] = 'peliculaparticipante/indexPrivada';
+
+
+
+////////
+$route['private/formPeliculaParticipante'] = 'peliculaparticipante/formPeliculaParticipante';
+$route['private/asigPeliculaParticipante'] = 'peliculaparticipante/asigPeliculaParticipante';

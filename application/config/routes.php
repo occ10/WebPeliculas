@@ -70,6 +70,33 @@ $route['private'] = 'home/indexPrivada';
 
 //Rutas de gestión de películas (grocery_crud)
 $route['private/listadopeliculas'] = 'pelicula/indexPrivada';
+$route['private/listadopeliculas/add'] = 'pelicula/indexPrivada';
+$route['private/listadopeliculas/insert'] = 'pelicula/indexPrivada';
+$route['private/listadopeliculas/insert_validation'] = 'pelicula/indexPrivada';
+$route['private/listadopeliculas/success/:num'] = 'pelicula/indexPrivada';
+$route['private/listadopeliculas/delete/:num'] = 'pelicula/indexPrivada';
+$route['private/listadopeliculas/read/:num'] = 'pelicula/indexPrivada';
+$route['private/listadopeliculas/edit/:num'] = 'pelicula/indexPrivada';
+$route['private/listadopeliculas/update_validation/:num'] = 'pelicula/indexPrivada';
+$route['private/listadopeliculas/update/:num'] = 'pelicula/indexPrivada';
+$route['private/listadopeliculas/ajax_list_info'] = 'pelicula/indexPrivada';
+$route['private/listadopeliculas/ajax_list'] = 'pelicula/indexPrivada';
+
+
+//Rutas de gestión de premios (grocery_crud)
+$route['private/listadopremios'] = 'premio/indexPrivada';
+$route['private/listadopremios/add'] = 'premio/indexPrivada';
+$route['private/listadopremios/insert'] = 'premio/indexPrivada';
+$route['private/listadopremios/insert_validation'] = 'premio/indexPrivada';
+$route['private/listadopremios/success/:num'] = 'premio/indexPrivada';
+$route['private/listadopremios/delete/:num'] = 'premio/indexPrivada';
+$route['private/listadopremios/read/:num'] = 'premio/indexPrivada';
+$route['private/listadopremios/edit/:num'] = 'premio/indexPrivada';
+$route['private/listadopremios/update_validation/:num'] = 'premio/indexPrivada';
+$route['private/listadopremios/update/:num'] = 'premio/indexPrivada';
+$route['private/listadopremios/ajax_list_info'] = 'premio/indexPrivada';
+$route['private/listadopremios/ajax_list'] = 'premio/indexPrivada';
+
 
 //Rutas de gestión de participantes (grocery_crud)
 $route['private/listadoparticipantes'] = 'participante/indexPrivada';
@@ -85,5 +112,4 @@ $route['private/listadoparticipantes/update/:num'] = 'participante/indexPrivada'
 $route['private/listadoparticipantes/ajax_list_info'] = 'participante/indexPrivada';
 $route['private/listadoparticipantes/ajax_list'] = 'participante/indexPrivada';
 
-//Rutas de gestión de premios (grocery_crud)
-$route['private/listadopremios'] = 'premio/indexPrivada';
+

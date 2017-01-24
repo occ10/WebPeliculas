@@ -19,7 +19,7 @@ $this->load->view('private/includes/cabecera');
             </div>
         </div>
         <div class="row">
-
+            <?php echo $output; ?>
         </div>
     </div>
     <!-- /.row -->

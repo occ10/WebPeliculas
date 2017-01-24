@@ -55,7 +55,7 @@
 
 
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#peliculaparticipante"><i class="fa fa-trophy"></i> Peliculas Participantes <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#peliculaparticipante"><i class="fa fa-film"></i><i class="fa fa-user"></i> Peliculas Participantes <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="peliculaparticipante" class="collapse">
                     <li>
                         <a href="<?php echo site_url('private/listadopeliculaparticipante')?>">Gestión</a>
@@ -67,7 +67,7 @@
             </li>
 
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#peliculapremio"><i class="fa fa-trophy"></i> Peliculas Premios <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#peliculapremio"><i class="fa fa-film"></i> <i class="fa fa-trophy"></i> Peliculas Premios <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="peliculapremio" class="collapse">
                     <li>
                         <a href="<?php echo site_url('private/listadopeliculapremio')?>">Gestión</a>

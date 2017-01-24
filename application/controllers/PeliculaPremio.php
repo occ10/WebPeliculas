@@ -48,7 +48,7 @@ class PeliculaPremio extends CI_Controller {
         );
         $this->load->model('PeliculaPremioModel');
         $Resultado =$this->PeliculaPremioModel->consultarDatosDuplicados($data);
-        echo '<pre>' . $Resultado . '</pre>';
+
         if(!isset($Resultado)){
             //Transferimos datos al modelo
             $this->PeliculaPremioModel->insertaPeliculaPremio($data);

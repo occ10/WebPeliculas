@@ -133,3 +133,25 @@ $route['private/listadopeliculaparticipante/ajax_list'] = 'peliculaparticipante/
 ////////
 $route['private/formPeliculaParticipante'] = 'peliculaparticipante/formPeliculaParticipante';
 $route['private/asigPeliculaParticipante'] = 'peliculaparticipante/asigPeliculaParticipante';
+
+
+//Rutas de gestión de peliculaPremio (grocery_crud)
+$route['private/listadopeliculapremio'] = 'peliculapremio/indexPrivada';
+$route['private/listadopeliculapremio/add'] = 'peliculapremio/indexPrivada';
+
+$route['private/listadopeliculapremio/insert'] = 'peliculapremio/indexPrivada';
+$route['private/listadopeliculapremio/insert_validation'] = 'peliculapremio/indexPrivada';
+$route['private/listadopeliculapremio/success/:num'] = 'peliculapremio/indexPrivada';
+
+$route['private/listadopeliculapremio/delete/:num'] = 'peliculapremio/indexPrivada';
+$route['private/listadopeliculapremio/read/:num'] = 'peliculapremio/indexPrivada';
+$route['private/listadopeliculapremio/edit/:num'] = 'peliculapremio/indexPrivada';
+$route['private/listadopeliculapremio/update_validation/:num'] = 'peliculapremio/indexPrivada';
+$route['private/listadopeliculapremio/update/:num'] = 'peliculapremio/indexPrivada';
+$route['private/listadopeliculapremio/ajax_list_info'] = 'peliculapremio/indexPrivada';
+$route['private/listadopeliculapremio/ajax_list'] = 'peliculapremio/indexPrivada';
+
+
+////////
+$route['private/formPeliculaPremio'] = 'peliculapremio/formPeliculaPremio';
+$route['private/asigPeliculaPremio'] = 'peliculapremio/asigPeliculaPremio';

@@ -24,24 +24,22 @@ class PeliculaParticipante extends CI_Controller {
         $crud->set_theme("datatables");
         $crud->set_crud_url_path(site_url('private/listadopeliculaparticipante'));
         $output = $crud->render();
-        echo "<pre>";
-        //print_r($output);
-        echo "</pre>";
+
         $this->load->view('private/listadoPeliculaParticipantes',$output);
     }
 
     public function formPeliculaParticipante(){
-            $mensaje="";
+
       		$this->load->model('PeliculaParticipanteModel');
             $Resultado1['result1'] = $this->PeliculaParticipanteModel->get_contents1();
             $Resultado1['result2'] = $this->PeliculaParticipanteModel->get_contents2();
-            $this->load->view('private/formPeliculaParticipantes',$Resultado1,$mensaje);
+            $this->load->view('private/formPeliculaParticipantes',$Resultado1);
 
     }
 
     public function asigPeliculaParticipante(){
 
-        $mensaje="";
+        $mensaje['data']="";
         //Por defecto siempre registramos usuarios de tipo 2 (usuarios normales)
         $data = array(
             'pelicula' => $this->input->post('pelicula'),
@@ -53,10 +51,10 @@ class PeliculaParticipante extends CI_Controller {
         if(!isset($Resultado)){
             //Transferimos datos al modelo
             $this->PeliculaParticipanteModel->insertaPeliculaParticipante($data);
-            $mensaje="Datos insertados correctamente";
+            $mensaje['msg']="Datos insertados correctamente";
         }else{
 
-            $mensaje="El participante ya participa en la pilicula";
+            $mensaje['msg']="El participante ya participa en la pilicula";
         }
         $Resultado1['result1'] = $this->PeliculaParticipanteModel->get_contents1();
         $Resultado1['result2'] = $this->PeliculaParticipanteModel->get_contents2();

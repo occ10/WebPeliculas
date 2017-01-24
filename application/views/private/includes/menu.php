@@ -66,7 +66,17 @@
                 </ul>
             </li>
 
-
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#peliculapremio"><i class="fa fa-trophy"></i> Peliculas Premios <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="peliculapremio" class="collapse">
+                    <li>
+                        <a href="<?php echo site_url('private/listadopeliculapremio')?>">Gestión</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo site_url('private/formPeliculaPremio')?>">Insertar Premio Pelicula</a>
+                    </li>
+                </ul>
+            </li>
 
 
         </ul>

@@ -1,14 +1,14 @@
-PASOS PREVIOS
+PASOS PREVIOS (HECHOS)
 
-- Subir código de las plantillas a Github. Luego se irán modificando.
+- Subir código de las plantillas a Github. Luego se irán modificando. HECHO.
 
 - Creación base de datos (entidad relación + modelo físico en phpmyadmin). Cada uno de nosotros deberá
-tener la base de datos en local (en xampp). Si se actualiza con algún campo nuevo o tabla nueva, habrá que avisar.
+tener la base de datos en local (en xampp). Si se actualiza con algún campo nuevo o tabla nueva, habrá que avisar. HECHO.
 
-- Para realizar la base de datos, seguir el diagrama de datos que se realizó en la primera práctica. Hay que agregar también la entidad "Comentario", tal y como nos dijo Jaume.
+- Para realizar la base de datos, seguir el diagrama de datos que se realizó en la primera práctica. Hay que agregar también la entidad "Comentario", tal y como nos dijo Jaume. HECHO.
 
 - Adaptar plantilla web a nuestro proyecto: quitar secciones que no nos interesan y meter estructura de codeigniter poco a poco en los archivos .html de la plantilla.
-Esto debe hacerse tanto para public como para private.
+Esto debe hacerse tanto para public como para private. HECHO.
 
 
 PASOS DESARROLLO
@@ -38,26 +38,20 @@ PASOS DESARROLLO
 
 PASOS DOCUMENTACIÓN
 
-- Realmente la documentación cuenta más para esta práctica que incluso el desarrollo, así que no nos compliquemos mucho picando código.
+Hay que hacer:
 
-- Esta parte de documentación creo que entre los dos podremos realizarla la última semana: el día 24 tenemos examen de ADI y después ya no tenemos nada hasta el 27 que es la entrega. 
-En dos tardes creo que se puede documentar suficientemente bien.
+- Entidad relación. OK, ya hecho.
 
-Esto es lo que habría que hacer:
+- Agregar entidad "Comentarios" al datamodel de la primera práctica. No se hará, en su lugar, se pone un "antes" y un "después" en la memoria. OK.
 
-- Entidad relación (ya realizada en los PASOS PREVIOS).
+- Wireframe de navegación. SIN HACER.
 
-- Agregar entidad "Comentarios" al datamodel de la primera práctica.
-
-- Wireframe de navegación
-
-- Mockups de la web:
-	- Con herramientas como balsamiq mockups o mockup builder.
-	- También hacer capturas de la web definitiva, para que se pueda comparar cómo ha quedado vs cómo era el wireframe.
+- Mockups de la web. SIN HACER. Realizar tanto capturas de la web como mockups (home parte pública, detalles de una película, formulario de login/registro, home parte privada y la página de la tabla crud de películas)
+	- Utilizar herramientas como balsamiq mockups o mockup builder.
 
 - Apuntar qué patrones de diseño web hemos seguido. Repasar los apuntes de patrones y poner algunos.
 
-- Realizar memoria PDF con los siguientes apartados:
+- Realizar memoria PDF con los siguientes apartados. SIN HACER:
 
 	- Titulo
 	– Introducción/descripción general

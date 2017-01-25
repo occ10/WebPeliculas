@@ -5,12 +5,14 @@
     <title>WebPeliculas</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="One Movies Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
         function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- //for-mobile-apps -->
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo base_url();?>assets/images/favicon.png">
     <link href="<?php echo base_url();?>assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/contactstyle.css" type="text/css" media="all" />
@@ -79,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>";
 		}else{
 			
-        echo "<div class='w3l_sign_in_register' >Bienvenido " . $this->session->userdata('user') . " | <a href='" . site_url('cerrarSesion') . "' >Cerrar sesión</a>"
+        echo "<div class='w3l_sign_in_register' >Bienvenido " . $this->session->userdata('user')->nombre . " | <a href='" . site_url('cerrarSesion') . "' >Cerrar sesión</a>"
             
         . "</div>";
 		}
@@ -105,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="form">
                                 <h3>Entra con tu cuenta</h3>
-                                <form action="login/index" method="post">
+                                <form action="<?php echo site_url('login')?>" method="post">
                                     <input type="text" name="nombre" placeholder="Usuario" required="">
                                     <input type="password" name="password" placeholder="Contraseña" required="">
                                     <input type="submit" value="Entrar">
@@ -113,7 +115,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="form">
                                 <h3>Regístrate con nosotros</h3>
-                                <form action="registro/index" method="post">
+                                <form action="<?php echo site_url('registro')?>" method="post">
                                     <input type="text" name="nombre" placeholder="Usuario" required="">
                                     <input type="password" name="password" placeholder="Contraseña" required="">
                                     <input type="email" name="email" placeholder="Correo electrónico" required="">

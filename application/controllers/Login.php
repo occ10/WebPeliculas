@@ -23,13 +23,13 @@ class Login extends CI_Controller {
         //HAY QUE COMPROBAR QUË TIPO ES
 
         //SI ES TIPO == 1 -> ES USUARIO ADMIN Y DEBE SER REDIRIGIDO A LA VISTA PRIVATE
-        //SI ES TIPO == 2
+        //SI ES TIPO == 2 -> ES USUARIO NORMAL Y SE REDIRIGE A LA VISTA PUBLIC
         //Si se crea la sesión, debe aparecer un mensaje en la vista cabecera
 		$this->load->library('session');
         
-		
 		if (isset($Resultado)){
-			$this->session->set_userdata('user', $data['nombre']);
+		    //Se guarda el objeto
+			$this->session->set_userdata('user', $Resultado);
 			
 			if($Resultado->tipo==1)
 				//$this->load->view('private/home');

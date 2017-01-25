@@ -5,6 +5,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?php
 $this->load->view('public/includes/cabecera');
 ?>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#votacion').on('change', function() {
+            $("#formVotacion").submit()
+        })
+    });
+
+</script>
 <!-- single -->
 <div class="single-page-agile-main">
     <div class="container">
@@ -51,19 +62,34 @@ $this->load->view('public/includes/cabecera');
                                     </div>
                                     <hr>
                                     <h4 class="titulo-detalle">Votación</h4>
-                                    <select name="votacion">
-                                        <option value="0">No vista</option>
-                                        <option value="10">10 - Excelente</option>
-                                        <option value="9">9 - Muy buena</option>
-                                        <option value="8">8 - Notable</option>
-                                        <option value="7">7 - Buena</option>
-                                        <option value="6">6 - Interesante</option>
-                                        <option value="5">5 - Pasable</option>
-                                        <option value="4">4 - Regular</option>
-                                        <option value="3">3 - Floja</option>
-                                        <option value="2">2 - Mala</option>
-                                        <option value="1">1 - Muy mala</option>
-                                    </select>
+
+                                    <?php if ($this->session->userdata('user')){
+                                        $checked = "selected='selected'";
+                                        ?>
+
+                                    <form id="formVotacion" action="<?php echo site_url('votacion')?>" method="post">
+                                        <select name="votacion" id="votacion">
+                                            <option value="0" >No vista</option>
+                                            <option value="10" <?=(isset($usuarioVotacion) && (int)$usuarioVotacion->voto == 10)? $checked:""?>>10 - Excelente</option>
+                                            <option value="9" <?=(isset($usuarioVotacion) && $usuarioVotacion->voto == 9)? $checked:""?>>9 - Muy buena</option>
+                                            <option value="8" <?=(isset($usuarioVotacion) && $usuarioVotacion->voto == 8)? $checked:""?>>8 - Notable</option>
+                                            <option value="7" <?=(isset($usuarioVotacion) && $usuarioVotacion->voto == 7)? $checked:""?>>7 - Buena</option>
+                                            <option value="6" <?=(isset($usuarioVotacion) && $usuarioVotacion->voto == 6)? $checked:""?>>6 - Interesante</option>
+                                            <option value="5" <?=(isset($usuarioVotacion) && $usuarioVotacion->voto == 5)? $checked:""?>>5 - Pasable</option>
+                                            <option value="4" <?=(isset($usuarioVotacion) && $usuarioVotacion->voto == 4)? $checked:""?>>4 - Regular</option>
+                                            <option value="3" <?=(isset($usuarioVotacion) && $usuarioVotacion->voto == 3)? $checked:""?>>3 - Floja</option>
+                                            <option value="2" <?=(isset($usuarioVotacion) && $usuarioVotacion->voto == 2)? $checked:""?>>2 - Mala</option>
+                                            <option value="1" <?=(isset($usuarioVotacion) && $usuarioVotacion->voto == 1)? $checked:""?>>1 - Muy mala</option>
+                                        </select>
+                                        <input type="hidden" name="pelicula" value="<?= $pelicula->id?>">
+                                        <div class="clearfix"></div>
+                                    </form>
+                                    <?php } else{ ?>
+                                        <div class="panel_text">
+                                            No puedes votar. <a href='#' data-toggle='modal' data-target='#myModal'>Inicia sesión/regístrate</a> para ello.
+                                        </div>
+
+                                    <?php } ?>
                                     <hr>
                                     <h4 class="titulo-detalle">Género</h4>
                                     <div class="panel_text">
@@ -100,136 +126,50 @@ $this->load->view('public/includes/cabecera');
                     </div>
                     <hr>
                     <div class="row">
-                    <h4 class="titulo-detalle">Comentarios</h4>
-                    <div class="all-comments">
+                    <h4 class="titulo-detalle">Comentarios <?=(count($comentarios > 0)? "(".count($comentarios).")" : "")?></h4>
+                    <?php
+                    if ($this->session->userdata('user')){ ?>
                         <div class="all-comments-info">
                             <div class="agile-info-wthree-box">
-                                <form>
-                                    <textarea placeholder="Escribe tu mensaje" required=""></textarea>
+                                <form action="<?php echo site_url('comentario')?>" method="post">
+                                    <textarea name="comentario" placeholder="Escribe tu mensaje" required=""></textarea>
+                                    <input type="hidden" name="pelicula" value="<?= $pelicula->id?>">
                                     <input type="submit" value="Enviar">
                                     <div class="clearfix"></div>
                                 </form>
                             </div>
                         </div>
+                    <?php } else{ ?>
+                        <div class="panel_text">
+                            No puedes comentar. <a href='#' data-toggle='modal' data-target='#myModal'>Inicia sesión/regístrate</a> para ello.
+                        </div>
+                    <?php }?>
+                    <div class="all-comments">
+
                         <div class="media-grids">
                             <?php
+                            echo (count($comentarios) == 0)? "Sin comentarios. ¡Sé el primero!" : "";
                             foreach ($comentarios as $comentario):?>
 
                                 <div class="media">
-                                    <h5><?= strtoupper($comentario->nombre) ?></h5>
+                                    <h5><?= $comentario->texto ?></h5>
                                     <div class="media-left">
                                         <a href="#">
-                                            <img src="<?= base_url() ?>assets/images/user.jpg" title="One movies"
+                                            <img src="<?= base_url() ?>assets/images/user.jpg" title="<?=$comentario->nombre?>"
                                                  alt=" "/>
                                         </a>
                                     </div>
                                     <div class="media-body">
-                                        <p><?= $comentario->texto ?></p>
+                                        <p><?= strtoupper($comentario->nombre) ?></p>
                                         <span>Fecha/hora: <?= date("d-m-Y H:i:s", strtotime($comentario->fechahora)) ?></span>
                                     </div>
                                 </div>
                             <?php endforeach;
                             ?>
-
-
                         </div>
                     </div>
                 </div>
                 </div>
-                <!--<div class="col-md-4 single-right">
-                    <h3>Up Next</h3>
-                    <div class="single-grid-right">
-                        <div class="single-right-grids">
-                            <div class="col-md-4 single-right-grid-left">
-                                <a href="single.html"><img src="assets/images/m1.jpg" alt="" /></a>
-                            </div>
-                            <div class="col-md-8 single-right-grid-right">
-                                <a href="single.html" class="title"> Nullam interdum metus</a>
-                                <p class="author"><a href="#" class="author">John Maniya</a></p>
-                                <p class="views">2,114,200 views</p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="single-right-grids">
-                            <div class="col-md-4 single-right-grid-left">
-                                <a href="single.html"><img src="assets/images/m2.jpg" alt="" /></a>
-                            </div>
-                            <div class="col-md-8 single-right-grid-right">
-                                <a href="single.html" class="title"> Nullam interdum metus</a>
-                                <p class="author"><a href="#" class="author">John Maniya</a></p>
-                                <p class="views">2,114,200 views </p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="single-right-grids">
-                            <div class="col-md-4 single-right-grid-left">
-                                <a href="single.html"><img src="assets/images/m3.jpg" alt="" /></a>
-                            </div>
-                            <div class="col-md-8 single-right-grid-right">
-                                <a href="single.html" class="title"> Nullam interdum metus</a>
-                                <p class="author"><a href="#" class="author">John Maniya</a></p>
-                                <p class="views">2,114,200 views</p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="single-right-grids">
-                            <div class="col-md-4 single-right-grid-left">
-                                <a href="single.html"><img src="assets/images/m4.jpg" alt="" /></a>
-                            </div>
-                            <div class="col-md-8 single-right-grid-right">
-                                <a href="single.html" class="title"> Nullam interdum metus</a>
-                                <p class="author"><a href="#" class="author">John Maniya</a></p>
-                                <p class="views">2,114,200 views</p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="single-right-grids">
-                            <div class="col-md-4 single-right-grid-left">
-                                <a href="single.html"><img src="assets/images/m5.jpg" alt="" /></a>
-                            </div>
-                            <div class="col-md-8 single-right-grid-right">
-                                <a href="single.html" class="title"> Nullam interdum metus</a>
-                                <p class="author"><a href="#" class="author">John Maniya</a></p>
-                                <p class="views">2,114,200 views</p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="single-right-grids">
-                            <div class="col-md-4 single-right-grid-left">
-                                <a href="single.html"><img src="assets/images/c5.jpg" alt="" /></a>
-                            </div>
-                            <div class="col-md-8 single-right-grid-right">
-                                <a href="single.html" class="title"> Nullam interdum metus</a>
-                                <p class="author"><a href="#" class="author">John Maniya</a></p>
-                                <p class="views">2,114,200 views</p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="single-right-grids">
-                            <div class="col-md-4 single-right-grid-left">
-                                <a href="single.html"><img src="assets/images/m6.jpg" alt="" /></a>
-                            </div>
-                            <div class="col-md-8 single-right-grid-right">
-                                <a href="single.html" class="title"> Nullam interdum metus</a>
-                                <p class="author">By <a href="#" class="author">John Maniya</a></p>
-                                <p class="views">2,114,200 views</p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="single-right-grids">
-                            <div class="col-md-4 single-right-grid-left">
-                                <a href="single.html"><img src="assets/images/m15.jpg" alt="" /></a>
-                            </div>
-                            <div class="col-md-8 single-right-grid-right">
-                                <a href="single.html" class="title"> Nullam interdum metus</a>
-                                <p class="author">By <a href="#" class="author">John Maniya</a></p>
-                                <p class="views">2,114,200 views</p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-
-                    </div>
-                </div>-->
             </div>
             <!-- //movie-browse-agile -->
         </div>

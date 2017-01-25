@@ -20,4 +20,27 @@ class PeliculaVotacionModel extends CI_Model
         $this->db->group_by('pelicula');
         return $this->db->get()->result();
     }
+
+    function insertaPeliculaVotacion($data)
+    {
+        //Inserta Votación
+        $this->db->insert('usuariovotapelicula', $data);
+    }
+
+    function actualizaPeliculaVotacion($data)
+    {
+        //Actualiza Votación
+        $this->db->replace('usuariovotapelicula', $data);
+    }
+
+    function consultarDatosDuplicados($data)
+    {
+        $this->db->select('*');
+        $this->db->from('usuariovotapelicula');
+        $this->db->where('usuario', $data['usuario']);
+        $this->db->where('pelicula', $data['pelicula']);
+
+        $query = $this->db->get();
+        return $result = $query->row();
+    }
 }

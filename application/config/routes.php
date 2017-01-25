@@ -63,6 +63,12 @@ $route['listadopeliculas'] = 'pelicula/index';
 $route['detallepelicula/(:num)'] = 'pelicula/detalle/$1'; //habrá que indicar un parámetro que será la id de la película
 $route['cerrarSesion'] = 'login/unset_session_data';//cerrar sesion
 $route['crud'] = 'gestion/index';//cerrar sesion
+$route['registro'] = 'registro/index';//cerrar sesion
+$route['login'] = 'login/index';//cerrar sesion
+$route['comentario'] = 'peliculacomentario/asigPeliculaComentario';//asignar comentario a una película
+$route['votacion'] = 'peliculavotacion/asigPeliculaVotacion';//asignar votación a una película
+
+
 
 /**
  * RUTAS PRIVADAS

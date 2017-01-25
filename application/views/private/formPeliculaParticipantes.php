@@ -14,14 +14,11 @@ $this->load->view('private/includes/cabecera');
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Asignar Participantes a Peliculas
+                    Asignar Participantes a Películas
                 </h1>
             </div>
         </div>
         <div class="row">
-            <h2>Form control</h2>
-            <p>The form below contains two dropdown menus</p>
-
             <?php
 
             if(isset($msg) && $msg!='') {
@@ -36,7 +33,7 @@ $this->load->view('private/includes/cabecera');
                         <?php
 
                         foreach($result1 as $Resultado) {
-                           echo " <option value='" . $Resultado->id . "'> " . $Resultado->titulo . "</option >";
+                           echo " <option value='" . $Resultado->id . "'> " .$Resultado->id ." - ". $Resultado->titulo .  "</option >";
 
                         }
                         ?>
@@ -50,7 +47,7 @@ $this->load->view('private/includes/cabecera');
 
                         foreach($result2 as $Resultado) {
 
-                            echo " <option value='" . $Resultado->id . "'> " . $Resultado->nombre . "</option >";
+                            echo " <option value='" . $Resultado->id . "'> " .$Resultado->id ." - ". $Resultado->nombre ." ".$Resultado->apellidos.  "</option >";
                         }
                         ?>
 

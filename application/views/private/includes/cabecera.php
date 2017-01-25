@@ -17,6 +17,9 @@
     <!-- Custom CSS -->
     <link href="<?php echo base_url();?>assets/css/sb-admin.css" rel="stylesheet">
 
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo base_url();?>assets/images/favicon.png">
+
+
     <!-- font-awesome icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- //font-awesome icons -->

@@ -11,11 +11,7 @@ class Pelicula extends CI_Controller {
         $this->load->library('grocery_CRUD');
         $this->load->helper('url');
         $this->load->model('PeliculaModel');
-        $this->load->model('PeliculaGeneroModel');
         $this->load->model('PeliculaVotacionModel');
-        $this->load->model('PeliculaParticipanteModel');
-        $this->load->model('PeliculaPremioModel');
-        $this->load->model('PeliculaComentarioModel');
     }
 
     /**
@@ -27,7 +23,6 @@ class Pelicula extends CI_Controller {
         $output['listado'] = $this->PeliculaModel->obtenerTodos();
         $output['votaciones'] = $this->PeliculaVotacionModel->obtenerVotacionesPuntuacionesPeliculas();
 
-        print_r($output['votaciones']);
         $this->load->view('public/listadopeliculas', $output);
     }
 
@@ -51,20 +46,18 @@ class Pelicula extends CI_Controller {
      */
     public function detalle($id)
     {
-        $pelicula = $this->PeliculaModel->buscaPorId($id);
-        $votaciones = $this->PeliculaVotacionModel->obtenerVotacionPuntuacionPelicula($id); //dado un id de película, obtener Número de votos y Puntuación media
-        $generos = $this->PeliculaGeneroModel->obtenerGenerosPelicula($id); //dado un id de película, obtener todos sus géneros
-        $participantes = $this->PeliculaParticipanteModel->obtenerParticipantesPelicula($id);
-        $premios = $this->PeliculaPremioModel->obtenerPremiosPelicula($id);
-        $comentarios = $this->PeliculaComentarioModel->obtenerComentariosPelicula($id);
-
-        $output['pelicula'] = $pelicula;
-        $output['votaciones'] = $votaciones;
-        $output['generos'] = $generos;
-        $output['participantes'] = $participantes;
-        $output['premios'] = $premios;
-        $output['comentarios'] = $comentarios;
-
+        //Cargamos en un array todo lo necesario para la vista de detalle
+        $output = $this->PeliculaModel->cargarDatosVistaDetalle($id);
+        if($this->session->userdata('user') != ""){
+            $data = array(
+                'pelicula' => $id,
+                'usuario' => $this->session->userdata('user')->id,
+            );
+            $votacion = $this->PeliculaVotacionModel->consultarDatosDuplicados($data);
+            if(isset($votacion)){
+                $output['usuarioVotacion'] = $votacion;
+            }
+        }
         $this->load->view('public/perfilPelicula', $output);
     }
 

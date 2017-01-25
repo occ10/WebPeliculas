@@ -412,12 +412,7 @@ width:100%;
     color:#ff8d1b;
     text-decoration: none;
 }
-.media:nth-child(3) {
-  padding-left: 4em;
-}
-.media:nth-child(5) {
-  padding-left: 4em;
-}
+
 .single-grid-right{
 	margin-top:2em;
 }
@@ -565,9 +560,7 @@ width:100%;
 	.media {
 		margin: 2em 0;
 	}
-	.media:nth-child(3) {
-		padding-left: 2em;
-	}
+
 	.song-info h3 {
 		font-size: 20px;
 		margin: 0;

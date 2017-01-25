@@ -20,7 +20,7 @@ class PeliculaParticipanteModel extends CI_Model
 
     function get_contents2()
     {
-        $this->db->select('id,nombre');
+        $this->db->select('id,nombre, apellidos');
         $this->db->from('participante');
         $query = $this->db->get();
         return $result = $query->result();

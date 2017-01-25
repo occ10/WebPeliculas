@@ -49,7 +49,7 @@ Hay que hacer:
 - Mockups de la web. SIN HACER. Realizar tanto capturas de la web como mockups (home parte pública, detalles de una película, formulario de login/registro, home parte privada y la página de la tabla crud de películas)
 	- Utilizar herramientas como balsamiq mockups o mockup builder.
 
-- Apuntar qué patrones de diseño web hemos seguido. Repasar los apuntes de patrones y poner algunos.
+- Apuntar qué patrones de diseño web hemos seguido. Repasar los apuntes de patrones y poner algunos. SIN HACER.
 
 - Realizar memoria PDF con los siguientes apartados. SIN HACER:
 
@@ -63,3 +63,17 @@ Hay que hacer:
 	– Problemas encontrados y su solución
 	– Mejoras y ampliaciones
 	– Referencias
+
+
+-----
+
+Cosas que van a quedar pendientes pero se explicarán en la memoria:
+
+Parte pública
+- Premios de participantes, solo se han implementado los premios de películas.
+- Buscador de películas.
+- Perfil del usuario, historial de votaciones/comentarios.
+
+Parte privada
+- Mejorar enlace entre película-participantes, película-premios.
+- Premios de participantes CRUD.

@@ -60,9 +60,10 @@ $route['gestion'] = 'gestion/index';
 $route['contacto'] = 'contacto/index';
 $route['faq'] = 'faq/index';
 $route['listadopeliculas'] = 'pelicula/index';
-$route['detallepelicula/(:any)'] = 'pelicula/detalle/$1'; //habrá que indicar un parámetro que será la id de la película
+$route['detallepelicula/(:num)'] = 'pelicula/detalle/$1'; //habrá que indicar un parámetro que será la id de la película
 $route['cerrarSesion'] = 'login/unset_session_data';//cerrar sesion
 $route['crud'] = 'gestion/index';//cerrar sesion
+
 /**
  * RUTAS PRIVADAS
  */

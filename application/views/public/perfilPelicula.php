@@ -11,7 +11,7 @@ $this->load->view('public/includes/cabecera');
         <!-- /w3l-medile-movies-grids -->
         <div class="agileits-single-top">
             <ol class="breadcrumb">
-                <li><a href="<?php echo site_url('/')?>">Inicio</a></li>
+                <li><a href="<?php echo site_url('/') ?>">Inicio</a></li>
                 <li class="active">Detalle</li>
             </ol>
         </div>
@@ -21,27 +21,33 @@ $this->load->view('public/includes/cabecera');
                 <div class="col-sm-12 single-left">
                     <div class="row">
                         <div class="song-info col-sm-8">
-                            <h4 class="titulo-detalle"><b>THE LEGEND OF TARZAN - Official Trailer 2</b></h4>
+                            <h4 class="titulo-detalle"><b><?= $pelicula->titulo ?></b></h4>
                             <div class="song-grid-right">
                                 <div class="single-agile-shar-buttons">
                                     <div class="row">
                                         <div class="col-sm-9">
                                             <ul class="ratings-detalle">
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                                <?php
+                                                //Calculamos nota en base 5
+                                                $nota = round($votaciones->voto * 5 / 10, 0);
+                                                for ($i = 0; $i < $nota; $i++):?>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <?php endfor;
+                                                $notaRestante = 5 - $nota;
+                                                for ($i = 0; $i < $notaRestante; $i++):?>
+                                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                                <?php endfor;
+                                                ?>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <p class="numeroVotos"><b>Nº Votos:</b> 12345</p>
+                                            <p class="numeroVotos"><b>Nº Votos:</b> <?= $votaciones->numeroVotos ?></p>
                                         </div>
                                     </div>
                                     <hr>
                                     <h4 class="titulo-detalle">Descripción</h4>
                                     <div class="panel_text">
-                                        En esta web encontrará toda la información relacionada con las películas de última actualidad (y también de más antigüedad). Podrá encontrar desde las novedades en cartelera hasta los detalles de cada película (sus participantes, como director/es, actores y actrices, etc.).
+                                        <?= $pelicula->sinopsis ?>
                                     </div>
                                     <hr>
                                     <h4 class="titulo-detalle">Votación</h4>
@@ -61,24 +67,39 @@ $this->load->view('public/includes/cabecera');
                                     <hr>
                                     <h4 class="titulo-detalle">Género</h4>
                                     <div class="panel_text">
-                                        Aventuras, Acción...
+                                        <?php
+                                        foreach ($generos as $genero) {
+                                            echo $genero->nombre . "<br>";
+                                        }
+                                        ?>
                                     </div>
                                     <hr>
                                     <h4 class="titulo-detalle">Participantes</h4>
                                     <div class="panel_text">
-                                        Director:<br>
-                                        Actores:
-                                        ...
+                                        <?php
+                                        foreach ($participantes as $participante) {
+                                            echo "<b>" . $participante->tipoParticipante . "</b>: " . $participante->nombre . " " . $participante->apellidos . "<br>";
+                                        }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <?php
+                        //Definimos ruta de imagen
+                        $rutaImagen = base_url() . "assets/images/sinImagen.jpg";
+                        if (file_exists(FCPATH . "assets/images/" . $pelicula->id . ".jpg"))
+                            $rutaImagen = base_url() . "assets/images/" . $pelicula->id . ".jpg";
+
+                        ?>
+
                         <div class="col-sm-4 video-grid-single-page-agileits">
-                            <div> <img src="<?php echo base_url();?>assets/images/6.jpg" alt="" class="img-responsive" /> </div>
+                            <div><img src="<?= $rutaImagen ?>" alt="" class="img-responsive"/></div>
                         </div>
                     </div>
                     <hr>
-                    <div class="clearfix"> </div>
+                    <div class="row">
                     <h4 class="titulo-detalle">Comentarios</h4>
                     <div class="all-comments">
                         <div class="all-comments-info">
@@ -86,37 +107,34 @@ $this->load->view('public/includes/cabecera');
                                 <form>
                                     <textarea placeholder="Escribe tu mensaje" required=""></textarea>
                                     <input type="submit" value="Enviar">
-                                    <div class="clearfix"> </div>
+                                    <div class="clearfix"></div>
                                 </form>
                             </div>
                         </div>
                         <div class="media-grids">
-                            <div class="media">
-                                <h5>TOM BROWN</h5>
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="assets/images/user.jpg" title="One movies" alt=" " />
-                                    </a>
+                            <?php
+                            foreach ($comentarios as $comentario):?>
+
+                                <div class="media">
+                                    <h5><?= strtoupper($comentario->nombre) ?></h5>
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="<?= base_url() ?>assets/images/user.jpg" title="One movies"
+                                                 alt=" "/>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <p><?= $comentario->texto ?></p>
+                                        <span>Fecha/hora: <?= date("d-m-Y H:i:s", strtotime($comentario->fechahora)) ?></span>
+                                    </div>
                                 </div>
-                                <div class="media-body">
-                                    <p>Maecenas ultricies rhoncus tincidunt maecenas imperdiet ipsum id ex pretium hendrerit maecenas imperdiet ipsum id ex pretium hendrerit</p>
-                                    <span>Fecha/hora: Admin</span>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <h5>MARK JOHNSON</h5>
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="assets/images/user.jpg" title="One movies" alt=" " />
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <p>Maecenas ultricies rhoncus tincidunt maecenas imperdiet ipsum id ex pretium hendrerit maecenas imperdiet ipsum id ex pretium hendrerit</p>
-                                    <span>Fecha/hora: Admin</span>
-                                </div>
-                            </div>
+                            <?php endforeach;
+                            ?>
+
+
                         </div>
                     </div>
+                </div>
                 </div>
                 <!--<div class="col-md-4 single-right">
                     <h3>Up Next</h3>

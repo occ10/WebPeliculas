@@ -10,14 +10,25 @@ class Pelicula extends CI_Controller {
         $this->load->database();// podria hacerlo desde el autoload
         $this->load->library('grocery_CRUD');
         $this->load->helper('url');
+        $this->load->model('PeliculaModel');
+        $this->load->model('PeliculaGeneroModel');
+        $this->load->model('PeliculaVotacionModel');
+        $this->load->model('PeliculaParticipanteModel');
+        $this->load->model('PeliculaPremioModel');
+        $this->load->model('PeliculaComentarioModel');
     }
 
     /**
-     * Listado de películas
+     * Listado de películas - parte pública
      */
     public function index()
     {
-        $this->load->view('public/listadoPeliculas');
+
+        $output['listado'] = $this->PeliculaModel->obtenerTodos();
+        $output['votaciones'] = $this->PeliculaVotacionModel->obtenerVotacionesPuntuacionesPeliculas();
+
+        print_r($output['votaciones']);
+        $this->load->view('public/listadopeliculas', $output);
     }
 
 
@@ -40,10 +51,21 @@ class Pelicula extends CI_Controller {
      */
     public function detalle($id)
     {
-        $this->load->model('PeliculaModel');
+        $pelicula = $this->PeliculaModel->buscaPorId($id);
+        $votaciones = $this->PeliculaVotacionModel->obtenerVotacionPuntuacionPelicula($id); //dado un id de película, obtener Número de votos y Puntuación media
+        $generos = $this->PeliculaGeneroModel->obtenerGenerosPelicula($id); //dado un id de película, obtener todos sus géneros
+        $participantes = $this->PeliculaParticipanteModel->obtenerParticipantesPelicula($id);
+        $premios = $this->PeliculaPremioModel->obtenerPremiosPelicula($id);
+        $comentarios = $this->PeliculaComentarioModel->obtenerComentariosPelicula($id);
 
-        $this->PeliculaModel->buscaPorId($id);
-        $this->load->view('public/perfilPelicula');
+        $output['pelicula'] = $pelicula;
+        $output['votaciones'] = $votaciones;
+        $output['generos'] = $generos;
+        $output['participantes'] = $participantes;
+        $output['premios'] = $premios;
+        $output['comentarios'] = $comentarios;
+
+        $this->load->view('public/perfilPelicula', $output);
     }
 
 }

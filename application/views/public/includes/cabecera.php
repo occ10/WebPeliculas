@@ -80,7 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>";
 		}else{
 			
-        echo "<div class='w3l_sign_in_register' > <a href='" . site_url('cerrarSesion') . "' >Bienvenido " . $this->session->userdata('user') . "</a>"
+        echo "<div class='w3l_sign_in_register' >Bienvenido " . $this->session->userdata('user') . " | <a href='" . site_url('cerrarSesion') . "' >Cerrar sesión</a>"
             
         . "</div>";
 		}

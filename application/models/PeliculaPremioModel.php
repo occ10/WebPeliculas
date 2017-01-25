@@ -42,4 +42,14 @@ class PeliculaPremioModel extends CI_Model
         $query = $this->db->get();
         return $result = $query->row();
     }
+
+    function obtenerPremiosPelicula($id){
+        $this->db->select('peliculapremio.*, premio.nombre as nombre');
+        $this->db->from('peliculapremio');
+        $this->db->join('premio', 'premio.id = peliculapremio.premio');
+        $this->db->where('pelicula', $id);
+        $resultado = $this->db->get();
+        return $resultado->result();
+
+    }
 }

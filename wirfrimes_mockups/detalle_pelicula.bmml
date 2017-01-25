@@ -1,0 +1,115 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1181" measuredH="1092" mockupW="1020" mockupH="1079">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="161" y="13" w="1020" h="1079" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Image" x="251" y="104" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>WEB</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="1062" y="130" w="-1" h="-1" measuredW="59" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Entrar</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::MenuBar" x="186" y="205" w="973" h="29" measuredW="272" measuredH="29" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pelicula%2C%20Listado%20Peliculas%2C%20Contacto</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Image" x="891" y="270" w="262" h="292" measuredW="77" measuredH="79" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Canvas" x="166" y="998" w="995" h="58" measuredW="100" measuredH="70" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::MenuBar" x="797" y="1013" w="-1" h="-1" measuredW="356" measuredH="29" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>INICIO%2C%20LISTADO%20PEL%CDCULAS%2C%20FAQ%2C%20CONTACTO</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Label" x="179" y="1017" w="-1" h="-1" measuredW="130" measuredH="21" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%A9%202017%20Web%20Pel%EDculas.</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Label" x="197" y="255" w="-1" h="-1" measuredW="86" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%20/%20Detalle</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::Label" x="179" y="299" w="-1" h="-1" measuredW="105" measuredH="38" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%7Bsize%3A30%7DVAIANA%7Bsize%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::Label" x="186" y="353" w="-1" h="-1" measuredW="46" measuredH="21" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>*%20*%20*%20*%20*</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Label" x="740" y="349" w="-1" h="-1" measuredW="102" measuredH="28" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%7Bsize%3A20%7DN%BA%20Votos%3A%200%7Bsize%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Label" x="179" y="389" w="-1" h="-1" measuredW="137" measuredH="28" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%7Bsize%3A20%7DDESCRIPCI%D3N%7Bsize%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::TextArea" x="179" y="432" w="656" h="140" measuredW="200" measuredH="140" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>La%20historia%20se%20desarrolla%20hace%20dos%20milenios%20en%20unas%20islas%20del%20sur%20del%20Pac%EDfico.%20La%20protagonista%20es%20Vaiana%20Waialiki%2C%20una%20joven%20que%20desea%20explorar%20el%20mundo%20navegando%20por%20el%20oc%E9ano.%20Ella%20es%20la%20%FAnica%20hija%20de%20un%20importante%20capit%E1n%20que%20pertenece%20a%20una%20familia%20con%20varias%20generaciones%20de%20marinos.</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Label" x="179" y="596" w="-1" h="-1" measuredW="96" measuredH="28" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%7Bsize%3A20%7DVOTACI%D3N%7Bsize%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::ComboBox" x="182" y="634" w="-1" h="-1" measuredW="80" measuredH="24" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>No%20Vista</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Label" x="182" y="677" w="-1" h="-1" measuredW="80" measuredH="28" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%7Bsize%3A20%7DG%C9NERO%7Bsize%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="179" y="720" w="-1" h="-1" measuredW="153" measuredH="28" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%7Bsize%3A20%7DPARTICIPANTES%7Bsize%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Label" x="181" y="748" w="-1" h="-1" measuredW="151" measuredH="21" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Director/a%3A%20Ron%20Clements</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Label" x="182" y="771" w="-1" h="-1" measuredW="142" measuredH="21" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Director/a%3A%20John%20Musker</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Label" x="174" y="798" w="-1" h="-1" measuredW="145" measuredH="28" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%7Bsize%3A20%7DCOMENTARIOS%7Bsize%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::TextArea" x="174" y="826" w="979" h="104" measuredW="200" measuredH="140" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Escribe%20tu%20mensaje</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Button" x="178" y="950" w="-1" h="-1" measuredW="60" measuredH="27" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Enviar</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

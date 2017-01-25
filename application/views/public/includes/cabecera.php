@@ -72,9 +72,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<?php
 
 		if (!$this->session->userdata('user')){
-        echo "<div class='w3l_sign_in_register' > " . $this->session->userdata('user') . "
-		     
-            <ul>
+       echo "<div class='w3l_sign_in_register' > 
+           <ul>
                 <li><a href='#' data-toggle='modal' data-target='#myModal'>Entrar</a></li>
             </ul>
         </div>";

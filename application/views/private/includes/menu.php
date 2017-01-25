@@ -16,7 +16,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Usuario <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-power-off"></i> Salir</a>
+                    <a href="<?php echo   site_url('cerrarSesion')  ?> "><i class="fa fa-fw fa-power-off"></i> Salir</a>
                 </li>
             </ul>
         </li>

@@ -207,10 +207,10 @@ ul#myTab {
 	    margin: 0.7em 0;
 }
 .mid-2 p {
-       float: left;
+    float: left;
     font-size: 1em;
     color: #333;
-    line-height: 22px;
+    line-height: 25px;
 }
 .block-stars {
     float: right;

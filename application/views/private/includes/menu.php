@@ -16,6 +16,9 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?=$this->session->userdata('user')->nombre?> <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li>
+                    <a href="<?php echo   site_url('/')  ?> "><i class="fa fa-fw fa-film"></i> Vista pública</a>
+                </li>
+                <li>
                     <a href="<?php echo   site_url('cerrarSesion')  ?> "><i class="fa fa-fw fa-power-off"></i> Salir</a>
                 </li>
             </ul>

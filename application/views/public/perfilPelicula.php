@@ -108,6 +108,16 @@ $this->load->view('public/includes/cabecera');
                                         }
                                         ?>
                                     </div>
+                                    <hr>
+                                    <h4 class="titulo-detalle">Premios</h4>
+                                    <div class="panel_text">
+                                        <?php
+                                        if(count($premios)==0) echo "Sin premios";
+                                        foreach ($premios as $premio) {
+                                            echo $premio->nombre."<br>";
+                                        }
+                                        ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
